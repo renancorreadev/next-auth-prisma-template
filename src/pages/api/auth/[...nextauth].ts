@@ -71,6 +71,13 @@ export function getAuthOptions(req: IncomingMessage): NextAuthOptions {
   return {
     adapter: PrismaAdapter(prisma),
     callbacks: {
+      async session({ session, token }) {
+        session.user?.name
+        session.user = {
+          name: token.sub,
+        }
+        return session
+      },
       //@ts-ignore
       async jwt({ token, user }) {
         if (user) {
@@ -98,14 +105,14 @@ export default async function auth(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  const isDefaultSigninPage =
-    req.method === 'GET' &&
-    req.query.nextauth.find((value) => value === 'signin')
+  // const isDefaultSigninPage =
+  //   req.method === 'GET' &&
+  //   req.query.nextauth.find((value) => value === 'signin')
 
-  // Hide Sign-In with Ethereum from default sign page
-  if (isDefaultSigninPage) {
-    authOptions.providers.pop()
-  }
+  // // Hide Sign-In with Ethereum from default sign page
+  // if (isDefaultSigninPage) {
+  //   authOptions.providers.pop()
+  // }
 
   return await NextAuth(req, res, authOptions)
 }
