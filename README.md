@@ -39,13 +39,12 @@ I have created this boilerplate because there was a missing one with all feature
 
 This boilerplate works out of the box with automatic migrations for rapid prototyping. I described this in my article [Improve prototyping speed of Prisma](https://huvik.dev/blog/improve-prototyping-speed-of-prisma), you can check how it works under the hood.
 
-![](https://i.imgur.com/kF73swy.gif)
+
 
 ### Automatic GraphQL hooks generation
 
 Hooks for GraphQL are automatically generated inside `src/lib/grahql/*` from your GraphQL files. You can customize hooks generation inside `.graphqlrc.yaml`.
 
-![](https://i.imgur.com/xNwz7AA.gif)
 
 ### Authentication using NextAuth.js
 
