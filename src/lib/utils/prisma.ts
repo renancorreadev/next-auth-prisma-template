@@ -1,11 +1,12 @@
-import { PrismaClient } from '@prisma/client'
+import { PrismaCLientCustom } from './prisma-adapter'
 
 declare global {
-  var prisma: PrismaClient
+  var prisma: PrismaCLientCustom | undefined
 }
 
-export const prisma = global.prisma ?? new PrismaClient()
-
-if (process.env.NODE_ENV === 'development') {
-  global.prisma = prisma
-}
+export const prisma =
+  globalThis.prisma ||
+  new PrismaCLientCustom({
+    log: ['query', 'info'],
+  })
+if (process.env.NODE_ENV !== 'production') globalThis.prisma = prisma
