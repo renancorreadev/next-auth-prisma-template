@@ -1,0 +1,19 @@
+{
+  "saveAndRun": {
+    "commands": [
+      {
+        "match": "schema.prisma",
+        "cmd": "yarn prisma db push",
+        "silent": false
+      },
+      {
+        "match": "./src/lib/pothos/*",
+        "cmd": "yarn schema:generate"
+      },
+      {
+        "match": "./src/lib/graphql/*",
+        "cmd": "yarn hooks:generate"
+      }
+    ]
+  }
+}

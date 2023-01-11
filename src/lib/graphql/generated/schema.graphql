@@ -1,0 +1,10 @@
+type Query {
+  users: [User!]!
+  viewer: User
+}
+
+type User {
+  id: ID!
+  image: String
+  name: String
+}
