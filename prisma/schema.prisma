@@ -57,6 +57,7 @@ model User {
   name          String?   @unique
   emailVerified DateTime?
   image         String?
+  addressWeb3   String    @unique
   accounts      Account[]
   sessions      Session[]
   role          Role      @default(USER)
