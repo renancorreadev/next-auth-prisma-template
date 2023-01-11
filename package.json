@@ -23,6 +23,9 @@
     "@pothos/plugin-prisma": "3.40.0",
     "@pothos/plugin-scope-auth": "3.17.0",
     "@prisma/client": "4.8.1",
+    "@rainbow-me/rainbowkit": "^0.8.1",
+    "@rainbow-me/rainbowkit-siwe-next-auth": "0.1.5",
+    "ethers": "5.7.2",
     "graphql": "16.6.0",
     "graphql-yoga": "3.3.0",
     "next": "13.1.1",
@@ -31,7 +34,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
-    "urql": "2.2.3"
+    "siwe": "1.1.6",
+    "urql": "2.2.3",
+    "wagmi": "0.10.10"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^2.16.2",
