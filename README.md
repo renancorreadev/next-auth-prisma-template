@@ -1,10 +1,14 @@
-# Next.js-auth-prisma boilerplate
+<p align="center"> 
+
+  NextJs + Typescript + Prisma DB + GraphQL + Web3 connection Template
+  
+</p>
 
 Build bleeding-edge full-stack applications using **Next.js**, **GraphQL**, **TypeScript** and **Prisma**.
 
 ## Getting started
 
-1. Clone this project `git clone https://github.com/huv1k/nextjs-auth-prisma`
+1. Clone this project `git clone https://github.com/renancorreadev/next-auth-prisma-template.git`
 2. Install dependencies `yarn install` or `npm install`
 3. [Setup](#Setup) your local environment
 4. Run application `yarn dev` or `npm run dev`
@@ -68,4 +72,4 @@ You need to create [GitHub OAuth App](https://github.com/settings/developers). Y
 - Local development: `http://localhost:3000/api/auth`
 - Production deployment: `https://www.YOURDOMAIN.TLD/api/auth`
 
-Then you are going to copy `Client ID` and `Client secret` and fill your environment variables.
+Copy `Client ID` and `Client secret` and fill your environment variables.
